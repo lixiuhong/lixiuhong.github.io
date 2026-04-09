@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-200;
+  }
+
+  a {
+    @apply text-accent dark:text-accent-dark hover:underline;
+  }
+}
