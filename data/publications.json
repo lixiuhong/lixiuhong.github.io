@@ -1,33 +1,90 @@
 [
   {
-    "id": "pub-1",
-    "title": "Paper Title: A Novel Approach to Efficient Kernel Generation",
-    "authors": "Your Name, Collaborator A, Collaborator B",
-    "venue": "MICRO",
-    "year": 2025,
-    "type": "conference",
-    "pdfUrl": "https://arxiv.org/abs/xxxx.xxxxx",
-    "externalUrl": "https://dl.acm.org/doi/xxxx"
+    "id": "tpds-2024",
+    "title": "Proteus: Simulating the performance of distributed DNN training",
+    "authors": "Jiangfei Duan, Xiuhong Li, Ping Xu, Xingcheng Zhang, Shengen Yan, Yun Liang, Dahua Lin",
+    "venue": "TPDS",
+    "year": 2024,
+    "type": "journal"
   },
   {
-    "id": "pub-2",
-    "title": "Another Paper: Efficient Communication Overlapping for Distributed Training",
-    "authors": "Your Name, Collaborator C, Collaborator D",
-    "venue": "MLSys",
-    "year": 2025,
-    "type": "conference",
-    "pdfUrl": "https://arxiv.org/abs/xxxx.xxxxx",
-    "externalUrl": "https://arxiv.org/abs/xxxx.xxxxx"
+    "id": "dac-2024",
+    "title": "A Holistic Functionalization Approach to Optimizing Imperative Tensor Programs in Deep Learning",
+    "authors": "Jinming Ma, Xiuhong Li, Zihan Wang, Xingcheng Zhang, Shengen Yan, Yuting Chen, Yueqian Zhang, Minxi Jin, Lijuan Jiang, Yun Liang, Chao Yang, Dahua Lin",
+    "venue": "DAC",
+    "year": 2024,
+    "type": "conference"
   },
   {
-    "id": "pub-3",
-    "title": "FlexTensor: An Automatic Schedule Exploration and Optimization Framework",
-    "authors": "Your Name, Advisor A, Collaborator E, Collaborator F",
+    "id": "asplos-2024",
+    "title": "Centauri: Enabling efficient scheduling for communication-computation overlap in large model training via communication partitioning",
+    "authors": "Chang Chen, Xiuhong Li, Qianchao Zhu, Jiangfei Duan, Peng Sun, Xingcheng Zhang, Chao Yang",
     "venue": "ASPLOS",
-    "year": 2020,
-    "type": "conference",
-    "pdfUrl": "https://dl.acm.org/doi/xxxx",
-    "externalUrl": "https://dl.acm.org/doi/xxxx",
-    "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=xxxx"
+    "year": 2024,
+    "type": "conference"
+  },
+  {
+    "id": "iiswc-2022",
+    "title": "LongTail-Bench: A Benchmark Suite for Domain-Specific Operators in Deep Learning",
+    "authors": "Xiuhong Li, Shengen Yan, Lijuan Jiang, Ping Xu, Jinming Ma, Xingcheng Zhang, Dahua Lin",
+    "venue": "IISWC",
+    "year": 2022,
+    "type": "conference"
+  },
+  {
+    "id": "icpp-2022",
+    "title": "EasyView: Enabling and Scheduling Tensor Views in Deep Learning Compilers",
+    "authors": "Lijuan Jiang, Ping Xu, Qianchao Zhu, Xiuhong Li, Shengen Yan, Dahua Lin, Wenjing Ma, Zhouyang Li, Jun Liu, Jinmin Ma, Minxi Jin, Chao Yang",
+    "venue": "ICPP",
+    "year": 2022,
+    "type": "conference"
+  },
+  {
+    "id": "ppopp-2019",
+    "title": "A Coordinated Tiling and Batching Framework for Efficient GEMM on GPUs",
+    "authors": "Xiuhong Li, Yun Liang, Shengen Yan, Liancheng Jia, Yinghan Li",
+    "venue": "PPoPP",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "id": "ics-2018",
+    "title": "cuMBIR: An Efficient Framework for Low-dose X-ray CT Image Reconstruction on GPUs",
+    "authors": "Xiuhong Li, Yun Liang, Wentai Zhang, Taide Liu, Haochen Li, Guojie Luo, Ming Jiang",
+    "venue": "ICS",
+    "year": 2018,
+    "type": "conference"
+  },
+  {
+    "id": "tecs-2017",
+    "title": "Efficient Kernel Management on GPUs",
+    "authors": "Yun Liang, Xiuhong Li",
+    "venue": "TECS",
+    "year": 2017,
+    "type": "journal"
+  },
+  {
+    "id": "date-2016",
+    "title": "Efficient Kernel Management on GPUs",
+    "authors": "Xiuhong Li, Yun Liang",
+    "venue": "DATE",
+    "year": 2016,
+    "type": "conference"
+  },
+  {
+    "id": "aspdac-2015",
+    "title": "Performance-centric Register File Design for GPUs using Racetrack Memory",
+    "authors": "Shuo Wang, Yun Liang, Chao Zhang, Xiaolong Xie, Guangyu Sun, Yongpan Liu, Yu Wang, Xiuhong Li",
+    "venue": "ASP-DAC",
+    "year": 2015,
+    "type": "conference"
+  },
+  {
+    "id": "micro-2015",
+    "title": "Enabling Coordinated Register Allocation and Thread-level Parallelism Optimization for GPUs",
+    "authors": "Xiaolong Xie, Yun Liang, Xiuhong Li, Yudong Wu, Guangyu Sun, Tao Wang, Dongrui Fan",
+    "venue": "MICRO",
+    "year": 2015,
+    "type": "conference"
   }
 ]
