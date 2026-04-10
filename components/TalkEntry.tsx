@@ -14,10 +14,18 @@ export default function TalkEntry({ talk }: { talk: Talk }) {
       })
     : "";
 
+  const linkUrl = talk.eventUrl || talk.url;
+
   return (
     <div className="py-3">
       <div className="flex items-start gap-2">
-        <p className="font-medium">{talk.title}</p>
+        {linkUrl ? (
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline">
+            {talk.title}
+          </a>
+        ) : (
+          <p className="font-medium">{talk.title}</p>
+        )}
         {talk.type && (
           <span className="flex-shrink-0 text-xs px-2 py-0.5 rounded bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-slate-400">
             {TYPE_LABELS[talk.type] || talk.type}
@@ -43,11 +51,6 @@ export default function TalkEntry({ talk }: { talk: Talk }) {
         {talk.videoUrl && (
           <a href={talk.videoUrl} target="_blank" rel="noopener noreferrer">
             [video]
-          </a>
-        )}
-        {talk.eventUrl && (
-          <a href={talk.eventUrl} target="_blank" rel="noopener noreferrer">
-            [event]
           </a>
         )}
       </div>

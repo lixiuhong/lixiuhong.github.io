@@ -21,7 +21,8 @@
     "authors": "Chang Chen, Xiuhong Li, Qianchao Zhu, Jiangfei Duan, Peng Sun, Xingcheng Zhang, Chao Yang",
     "venue": "ASPLOS",
     "year": 2024,
-    "type": "conference"
+    "type": "conference",
+    "award": "Best Paper Award"
   },
   {
     "id": "iiswc-2022",
@@ -45,7 +46,8 @@
     "authors": "Xiuhong Li, Yun Liang, Shengen Yan, Liancheng Jia, Yinghan Li",
     "venue": "PPoPP",
     "year": 2019,
-    "type": "conference"
+    "type": "conference",
+    "award": "Best Paper Award Nomination"
   },
   {
     "id": "ics-2018",
@@ -77,7 +79,8 @@
     "authors": "Shuo Wang, Yun Liang, Chao Zhang, Xiaolong Xie, Guangyu Sun, Yongpan Liu, Yu Wang, Xiuhong Li",
     "venue": "ASP-DAC",
     "year": 2015,
-    "type": "conference"
+    "type": "conference",
+    "award": "Best Paper Award Nomination"
   },
   {
     "id": "micro-2015",

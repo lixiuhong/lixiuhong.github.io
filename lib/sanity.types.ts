@@ -39,6 +39,7 @@ export interface Publication {
   year: number;
   type: "conference" | "journal" | "preprint";
   abstract?: string;
+  award?: string;
   pdfUrl?: string;
   externalUrl?: string;
   codeUrl?: string;
@@ -57,4 +58,5 @@ export interface Talk {
   slidesUrl?: string;
   videoUrl?: string;
   eventUrl?: string;
+  url?: string;
 }

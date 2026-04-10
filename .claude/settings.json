@@ -29,7 +29,8 @@
       "Bash(git config:*)",
       "Bash(git remote:*)",
       "Bash(git push:*)",
-      "Read(//Users/lixiuhong/.ssh/**)"
+      "Read(//Users/lixiuhong/.ssh/**)",
+      "Bash(node /Users/lixiuhong/workspace/blog/scripts/sync-data-assets.mjs)"
     ],
     "additionalDirectories": [
       "/Users/lixiuhong/workspace/blog/docs/superpowers",

@@ -33,14 +33,12 @@
     }
   ],
   "awards": [
-    {
-      "date": "July 2024",
-      "description": "ASPLOS Best Paper Award"
-    },
-    {
-      "date": "Jan 2020",
-      "description": "Outstanding Researcher at SenseTime"
-    }
+    { "date": "July 2024", "description": "Best Paper Award, ASPLOS" },
+    { "date": "Jan 2020", "description": "Outstanding Award, SenseTime" },
+    { "date": "Feb 2019", "description": "Best Paper Nomination, PPoPP" },
+    { "date": "Jan 2019", "description": "Intern Star, SenseTime" },
+    { "date": "Oct 2016", "description": "National Scholarship" },
+    { "date": "Sep 2015", "description": "Best Paper Nomination, ASP-DAC" }
   ],
   "news": [
     {

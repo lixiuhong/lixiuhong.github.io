@@ -1,19 +1,30 @@
 [
   {
     "id": "talk-1",
-    "title": "Triton-distributed: Programming Distributed AI Systems",
-    "event": "Nvidia Tech Talk",
-    "date": "2024-12",
-    "location": "Redmond, USA",
+    "title": "计算编译标准体系：人工智能算力的价值枢纽",
+    "event": "第十一届中国云计算标准和和应用大会",
+    "date": "2022-6",
+    "location": "北京",
     "type": "invited",
-    "description": "Technique talk on compute-communication overlapping"
+    "description": "Technique talk on compute-communication overlapping",
+    "url": "http://dentar.cn/zt/2022ccs/html/"
   },
   {
     "id": "talk-2",
-    "title": "Efficient Operator Fusion for Deep Learning",
-    "event": "HPCA 2023",
-    "date": "2023-02",
+    "title": "基于通信切分的大模型训练计算和通信重叠优化技术",
+    "event": "中国计算机学会存储大会",
+    "date": "2024-11",
+    "location": "广州",
+    "type": "conference",
+    "url": "https://ccf.org.cn/chinastorage/news_d_3139"
+  },
+  {
+    "id": "talk-3",
+    "title": "高效 Agentic MaaS 推理系统：KV Cache 压缩技术在大模型推理系统中的应用实践",
+    "event": "全球软件开发大会",
+    "date": "2026-04",
     "location": "Montreal, Canada",
-    "type": "conference"
+    "type": "conference",
+    "url": "https://qcon.infoq.cn/2026/beijing/presentation/7021"
   }
 ]
