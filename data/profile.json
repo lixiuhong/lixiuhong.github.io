@@ -2,35 +2,51 @@
   "name": "Xiuhong Li",
   "title": "PhD · Deep Learning System & GPU Architecture",
   "location": "Beijing, China",
-  "bio": "I am a researcher focused on high-performance computing and compiler design. My work investigates new algorithms, abstractions, and frameworks for efficient training and inference on CPU and GPU.",
+  "bio": "I am currently serves as Vice President at Infinigence AI, where I am responsible for MaaS technologies. I received both my bachelor's degree and Ph.D. from Peking University. Prior to joining Infinigence AI, I held positions at SenseTime and Peking University, accumulating extensive industry and research experience in deep learning systems.",
   "photoUrl": "/data/profile.jpg",
   "socialLinks": [
-    { "platform": "Email", "url": "mailto:your.email@example.com" },
-    { "platform": "GitHub", "url": "https://github.com/yourusername" },
-    { "platform": "Google Scholar", "url": "https://scholar.google.com/citations?user=XXXX" },
-    { "platform": "LinkedIn", "url": "https://linkedin.com/in/yourusername" }
+    {
+      "platform": "Email",
+      "url": "mailto:lixiuhong@infini-ai.com"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/lixiuhong"
+    },
+    {
+      "platform": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=90eREm0AAAAJ&hl=zh-CN"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/%E7%A7%80%E7%BA%A2-%E6%9D%8E-161891a6/"
+    }
   ],
   "researchInterests": [
     {
-      "title": "High-performance Inference System",
-      "description": "System design for large language and vision models"
+      "title": "Deep Learning System",
+      "description": "System design for LLM including inference, training, and production"
     },
     {
-      "title": "AI Compiler",
-      "description": "Compiler design for the next generation of accelerators"
-    },
-    {
-      "title": "Distributed Systems",
-      "description": "Computation-communication co-optimization and automation"
+      "title": "GPU Architecture",
+      "description": "GPU architecture and its related architecutres at large scale Datacenter"
     }
   ],
   "awards": [
-    { "date": "July 2024", "description": "ASPLOS Best Paper Award" },
-    { "date": "Jan 2020", "description": "Outstanding Researcher at SenseTime" }
+    {
+      "date": "July 2024",
+      "description": "ASPLOS Best Paper Award"
+    },
+    {
+      "date": "Jan 2020",
+      "description": "Outstanding Researcher at SenseTime"
+    }
   ],
   "news": [
-    { "date": "2026-04", "text": "Give a presentation at QCon 2026" }
-   
+    {
+      "date": "2026-04",
+      "text": "Give a presentation at QCon 2026"
+    }
   ],
   "cvUrl": "/files/cv.pdf"
 }
