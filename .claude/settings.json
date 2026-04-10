@@ -26,7 +26,10 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(ls /Users/lixiuhong/workspace/blog/data/*.jpg /Users/lixiuhong/workspace/blog/data/*.png /Users/lixiuhong/workspace/blog/data/*.jpeg)",
       "Bash(gh auth:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Read(//Users/lixiuhong/.ssh/**)"
     ],
     "additionalDirectories": [
       "/Users/lixiuhong/workspace/blog/docs/superpowers",

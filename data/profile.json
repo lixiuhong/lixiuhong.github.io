@@ -25,13 +25,12 @@
     }
   ],
   "awards": [
-    { "date": "July 2024", "description": "Outstanding Doctoral Dissertation Award" },
-    { "date": "July 2024", "description": "Outstanding Ph.D. Graduate" }
+    { "date": "July 2024", "description": "ASPLOS Best Paper Award" },
+    { "date": "Jan 2020", "description": "Outstanding Researcher at SenseTime" }
   ],
   "news": [
-    { "date": "2025-05", "text": "Our project Triton-distributed has been released" },
-    { "date": "2025-03", "text": "Our paper has been accepted by ISCA 2025!" },
-    { "date": "2025-02", "text": "Two papers accepted by MLSys 2025!" }
+    { "date": "2026-04", "text": "Give a presentation at QCon 2026" },
+   
   ],
   "cvUrl": "/files/cv.pdf"
 }
