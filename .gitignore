@@ -6,6 +6,9 @@
 .pnp.js
 .yarn/install-state.gz
 
+# auto-synced data assets
+/public/data
+
 # testing
 /coverage
 

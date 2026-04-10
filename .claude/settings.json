@@ -20,7 +20,13 @@
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
       "Bash(npm ls:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(npx serve:*)",
+      "Bash(pkill -f \"serve out\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(ls /Users/lixiuhong/workspace/blog/data/*.jpg /Users/lixiuhong/workspace/blog/data/*.png /Users/lixiuhong/workspace/blog/data/*.jpeg)",
+      "Bash(gh auth:*)",
+      "Bash(git config:*)"
     ],
     "additionalDirectories": [
       "/Users/lixiuhong/workspace/blog/docs/superpowers",

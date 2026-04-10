@@ -1,9 +1,9 @@
 {
-  "name": "Your Name",
-  "title": "PhD Candidate · High-performance Computing & Compiler Design",
+  "name": "Xiuhong Li",
+  "title": "PhD · Deep Learning System & GPU Architecture",
   "location": "Beijing, China",
   "bio": "I am a researcher focused on high-performance computing and compiler design. My work investigates new algorithms, abstractions, and frameworks for efficient training and inference on CPU and GPU.",
-  "photoUrl": "/images/profile.jpg",
+  "photoUrl": "/data/profile.jpg",
   "socialLinks": [
     { "platform": "Email", "url": "mailto:your.email@example.com" },
     { "platform": "GitHub", "url": "https://github.com/yourusername" },
