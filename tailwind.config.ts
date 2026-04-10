@@ -10,8 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         accent: {
-          DEFAULT: "#8b0000",
-          dark: "#ff6b6b",
+          DEFAULT: "#4338ca",
+          light: "#6366f1",
+          lighter: "#818cf8",
+          dark: "#a5b4fc",
         },
       },
     },

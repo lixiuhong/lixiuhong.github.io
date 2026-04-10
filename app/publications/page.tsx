@@ -3,7 +3,7 @@ import PublicationEntry from "@/components/PublicationEntry";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Publications",
+  title: "Publications - Xiuhong Li",
 };
 
 export default async function PublicationsPage() {
@@ -24,8 +24,11 @@ export default async function PublicationsPage() {
     .sort((a, b) => b - a);
 
   return (
-    <div className="max-w-3xl">
-      <h1 className="text-3xl font-bold mb-8">Publications</h1>
+    <div className="max-w-[960px] mx-auto px-6 py-8">
+      <h1 className="text-2xl font-bold mb-8 flex items-center gap-2">
+        <span className="w-1 h-6 bg-gradient-to-b from-accent to-accent-lighter rounded-full" />
+        Publications
+      </h1>
 
       {sortedYears.length === 0 && (
         <p className="text-gray-500 dark:text-slate-500">
@@ -35,7 +38,7 @@ export default async function PublicationsPage() {
 
       {sortedYears.map((year) => (
         <section key={year} className="mb-8">
-          <h2 className="text-xl font-bold mb-2 pb-1 border-b border-gray-200 dark:border-slate-700">
+          <h2 className="text-lg font-bold mb-2 pb-1 border-b border-gray-200 dark:border-slate-700">
             {year}
           </h2>
           <div className="divide-y divide-gray-100 dark:divide-slate-800">

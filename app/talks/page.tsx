@@ -3,15 +3,18 @@ import TalkEntry from "@/components/TalkEntry";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Talks",
+  title: "Talks - Xiuhong Li",
 };
 
 export default async function TalksPage() {
   const talks = await getTalks();
 
   return (
-    <div className="max-w-3xl">
-      <h1 className="text-3xl font-bold mb-8">Talks</h1>
+    <div className="max-w-[960px] mx-auto px-6 py-8">
+      <h1 className="text-2xl font-bold mb-8 flex items-center gap-2">
+        <span className="w-1 h-6 bg-gradient-to-b from-accent to-accent-lighter rounded-full" />
+        Talks
+      </h1>
 
       {talks.length === 0 && (
         <p className="text-gray-500 dark:text-slate-500">

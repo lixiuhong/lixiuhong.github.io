@@ -11,7 +11,7 @@ export default async function CVPage() {
 
   if (!cvUrl) {
     return (
-      <div className="max-w-3xl">
+      <div className="max-w-[960px] mx-auto px-6 py-8">
         <h1 className="text-3xl font-bold mb-8">CV</h1>
         <p className="text-gray-500 dark:text-slate-500">
           No CV available yet. Add a cvUrl to data/profile.json.
@@ -21,7 +21,7 @@ export default async function CVPage() {
   }
 
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-[960px] mx-auto px-6 py-8">
       <h1 className="text-3xl font-bold mb-6">CV</h1>
 
       <a

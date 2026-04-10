@@ -8,8 +8,8 @@ import { getProfile } from "@/lib/sanity.queries";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Personal Academic Website",
-  description: "Academic research and publications",
+  title: "Xiuhong Li",
+  description: "Personal academic website",
 };
 
 export default async function RootLayout({
@@ -23,10 +23,8 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
-          <Navbar name={profile?.name || "My Site"} cvUrl={profile?.cvUrl} />
-          <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-            {children}
-          </main>
+          <Navbar name={profile?.name || "My Site"} />
+          {children}
         </ThemeProvider>
       </body>
     </html>
