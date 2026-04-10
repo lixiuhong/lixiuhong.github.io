@@ -29,7 +29,7 @@ export default async function PublicationsPage() {
 
       {sortedYears.length === 0 && (
         <p className="text-gray-500 dark:text-slate-500">
-          No publications yet. Add them in Sanity Studio.
+          No publications yet. Add them to data/publications.json.
         </p>
       )}
 
@@ -40,7 +40,7 @@ export default async function PublicationsPage() {
           </h2>
           <div className="divide-y divide-gray-100 dark:divide-slate-800">
             {groupedByYear[year].map((pub) => (
-              <PublicationEntry key={pub._id} pub={pub} />
+              <PublicationEntry key={pub.id} pub={pub} />
             ))}
           </div>
         </section>

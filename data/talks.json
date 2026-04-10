@@ -1,0 +1,19 @@
+[
+  {
+    "id": "talk-1",
+    "title": "Triton-distributed: Programming Distributed AI Systems",
+    "event": "Nvidia Tech Talk",
+    "date": "2024-12",
+    "location": "Redmond, USA",
+    "type": "invited",
+    "description": "Technique talk on compute-communication overlapping"
+  },
+  {
+    "id": "talk-2",
+    "title": "Efficient Operator Fusion for Deep Learning",
+    "event": "HPCA 2023",
+    "date": "2023-02",
+    "location": "Montreal, Canada",
+    "type": "conference"
+  }
+]

@@ -1,12 +1,11 @@
 import ProfileSidebar from "@/components/ProfileSidebar";
-import PortableTextRenderer from "@/components/PortableTextRenderer";
 import { getProfile } from "@/lib/sanity.queries";
 
 export default async function HomePage() {
   const profile = await getProfile();
 
   if (!profile) {
-    return <p>No profile data found. Please add a profile in Sanity Studio.</p>;
+    return <p>No profile data found. Please add data to data/profile.json.</p>;
   }
 
   return (
@@ -16,20 +15,20 @@ export default async function HomePage() {
       <div className="flex-1 min-w-0">
         <h1 className="text-3xl font-bold mb-6">About</h1>
 
-        {profile.cvFile?.asset?.url && (
+        {profile.cvUrl && (
           <a
-            href={profile.cvFile.asset.url}
+            href={profile.cvUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-accent text-white px-5 py-2.5 rounded mb-6 no-underline hover:no-underline hover:bg-accent/90 transition-colors"
           >
-            📄 Download CV (PDF)
+            Download CV (PDF)
           </a>
         )}
 
         {profile.bio && (
           <div className="prose dark:prose-invert max-w-none mb-8">
-            <PortableTextRenderer value={profile.bio} />
+            <p>{profile.bio}</p>
           </div>
         )}
 
@@ -74,9 +73,7 @@ export default async function HomePage() {
                   <span className="text-sm text-gray-500 dark:text-slate-500 flex-shrink-0 w-24">
                     {item.date}
                   </span>
-                  <div className="prose dark:prose-invert prose-sm max-w-none">
-                    <PortableTextRenderer value={item.text} />
-                  </div>
+                  <span>{item.text}</span>
                 </li>
               ))}
             </ul>

@@ -15,13 +15,13 @@ export default async function TalksPage() {
 
       {talks.length === 0 && (
         <p className="text-gray-500 dark:text-slate-500">
-          No talks yet. Add them in Sanity Studio.
+          No talks yet. Add them to data/talks.json.
         </p>
       )}
 
       <div className="divide-y divide-gray-100 dark:divide-slate-800">
         {talks.map((talk) => (
-          <TalkEntry key={talk._id} talk={talk} />
+          <TalkEntry key={talk.id} talk={talk} />
         ))}
       </div>
     </div>

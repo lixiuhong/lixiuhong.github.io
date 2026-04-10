@@ -23,7 +23,7 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
-          <Navbar name={profile?.name || "My Site"} cvUrl={profile?.cvFile?.asset?.url} />
+          <Navbar name={profile?.name || "My Site"} cvUrl={profile?.cvUrl} />
           <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
             {children}
           </main>

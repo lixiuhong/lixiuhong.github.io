@@ -1,5 +1,3 @@
-import type { PortableTextBlock } from "@portabletext/types";
-
 export interface SocialLink {
   platform: string;
   url: string;
@@ -17,39 +15,28 @@ export interface Award {
 
 export interface NewsItem {
   date: string;
-  text: PortableTextBlock[];
+  text: string;
 }
 
 export interface Profile {
-  _id: string;
   name: string;
   title: string;
   location: string;
-  bio: PortableTextBlock[];
-  photo?: {
-    asset: {
-      _ref: string;
-      url: string;
-    };
-  };
+  bio: string;
+  photoUrl?: string;
   socialLinks: SocialLink[];
   researchInterests: ResearchInterest[];
   awards: Award[];
   news: NewsItem[];
-  cvFile?: {
-    asset: {
-      url: string;
-    };
-  };
+  cvUrl?: string;
 }
 
 export interface Publication {
-  _id: string;
+  id: string;
   title: string;
   authors: string;
   venue: string;
   year: number;
-  date: string;
   type: "conference" | "journal" | "preprint";
   abstract?: string;
   pdfUrl?: string;
@@ -60,7 +47,7 @@ export interface Publication {
 }
 
 export interface Talk {
-  _id: string;
+  id: string;
   title: string;
   event: string;
   date: string;

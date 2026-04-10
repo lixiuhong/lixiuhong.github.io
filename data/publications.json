@@ -1,0 +1,33 @@
+[
+  {
+    "id": "pub-1",
+    "title": "Paper Title: A Novel Approach to Efficient Kernel Generation",
+    "authors": "Your Name, Collaborator A, Collaborator B",
+    "venue": "MICRO",
+    "year": 2025,
+    "type": "conference",
+    "pdfUrl": "https://arxiv.org/abs/xxxx.xxxxx",
+    "externalUrl": "https://dl.acm.org/doi/xxxx"
+  },
+  {
+    "id": "pub-2",
+    "title": "Another Paper: Efficient Communication Overlapping for Distributed Training",
+    "authors": "Your Name, Collaborator C, Collaborator D",
+    "venue": "MLSys",
+    "year": 2025,
+    "type": "conference",
+    "pdfUrl": "https://arxiv.org/abs/xxxx.xxxxx",
+    "externalUrl": "https://arxiv.org/abs/xxxx.xxxxx"
+  },
+  {
+    "id": "pub-3",
+    "title": "FlexTensor: An Automatic Schedule Exploration and Optimization Framework",
+    "authors": "Your Name, Advisor A, Collaborator E, Collaborator F",
+    "venue": "ASPLOS",
+    "year": 2020,
+    "type": "conference",
+    "pdfUrl": "https://dl.acm.org/doi/xxxx",
+    "externalUrl": "https://dl.acm.org/doi/xxxx",
+    "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=xxxx"
+  }
+]

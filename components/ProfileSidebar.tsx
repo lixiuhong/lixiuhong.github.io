@@ -15,9 +15,9 @@ export default function ProfileSidebar({ profile }: { profile: Profile }) {
   return (
     <aside className="w-full md:w-[280px] flex-shrink-0">
       <div className="text-center md:text-left">
-        {profile.photo?.asset?.url && (
+        {profile.photoUrl && (
           <img
-            src={profile.photo.asset.url}
+            src={profile.photoUrl}
             alt={profile.name}
             className="w-40 h-40 rounded-full mx-auto md:mx-0 object-cover"
           />
