@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__new_page",
+      "mcp__chrome-devtools__list_pages",
+      "Read(//var/folders/pc/dbb0j_6s0yxbcx3qp6dhkqvh0000gn/T/chrome-devtools-mcp-f3TbSG/**)",
+      "Read(//private/var/folders/pc/dbb0j_6s0yxbcx3qp6dhkqvh0000gn/T/chrome-devtools-mcp-f3TbSG/**)",
+      "Read(//Users/lixiuhong/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/skills/subagent-driven-development/**)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --use-npm)",
+      "Bash(npx create-next-app@14 blog-temp --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --use-npm)",
+      "Bash(npx create-next-app@14 blog-temp2 --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --use-npm)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(rsync -av --exclude='.git' /tmp/blog-temp2/ /Users/lixiuhong/workspace/blog/)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(npm ls:*)",
+      "Bash(git commit:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/lixiuhong/workspace/blog/docs/superpowers",
+      "/Users/lixiuhong/workspace/blog/sanity"
+    ]
+  }
+}

@@ -1,7 +1,8 @@
 import { client } from "./sanity.client";
 import type { Profile, Publication, Talk } from "./sanity.types";
 
-export async function getProfile(): Promise<Profile> {
+export async function getProfile(): Promise<Profile | null> {
+  if (!client) return null;
   return client.fetch(
     `*[_type == "profile"][0]{
       _id,
@@ -24,6 +25,7 @@ export async function getProfile(): Promise<Profile> {
 }
 
 export async function getPublications(): Promise<Publication[]> {
+  if (!client) return [];
   return client.fetch(
     `*[_type == "publication"] | order(year desc, date desc){
       _id,
@@ -44,6 +46,7 @@ export async function getPublications(): Promise<Publication[]> {
 }
 
 export async function getTalks(): Promise<Talk[]> {
+  if (!client) return [];
   return client.fetch(
     `*[_type == "talk"] | order(date desc){
       _id,
