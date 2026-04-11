@@ -60,3 +60,10 @@ export interface Talk {
   eventUrl?: string;
   url?: string;
 }
+
+export interface Blog {
+  slug: string;
+  title: string;
+  date: string;
+  summary?: string;
+}

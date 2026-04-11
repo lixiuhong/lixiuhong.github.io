@@ -1,0 +1,52 @@
+import { getBlogBySlug, getBlogs } from "@/lib/sanity.queries";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeHighlight from "rehype-highlight";
+import rehypeKatex from "rehype-katex";
+import type { Metadata } from "next";
+
+interface Props {
+  params: { slug: string };
+}
+
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+  return blogs.map((blog) => ({ slug: blog.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const result = await getBlogBySlug(params.slug);
+  if (!result) return { title: "Not Found" };
+  return { title: `${result.meta.title} - Xiuhong Li` };
+}
+
+export default async function BlogPostPage({ params }: Props) {
+  const result = await getBlogBySlug(params.slug);
+  if (!result) notFound();
+
+  return (
+    <div className="max-w-[960px] mx-auto px-6 py-8">
+      <h1 className="text-2xl font-bold mb-2">{result.meta.title}</h1>
+      <p className="text-sm text-gray-500 dark:text-slate-500 mb-8">
+        {new Date(result.meta.date).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </p>
+      <article className="prose dark:prose-invert max-w-none">
+        <MDXRemote
+          source={result.content}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm, remarkMath],
+              rehypePlugins: [rehypeHighlight, rehypeKatex],
+            },
+          }}
+        />
+      </article>
+    </div>
+  );
+}
