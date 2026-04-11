@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeHighlight from "rehype-highlight";
 import rehypeKatex from "rehype-katex";
+import KatexCopyMenu from "@/components/KatexCopyMenu";
 import type { Metadata } from "next";
 
 interface Props {
@@ -36,17 +37,19 @@ export default async function BlogPostPage({ params }: Props) {
           day: "numeric",
         })}
       </p>
-      <article className="prose dark:prose-invert max-w-none">
-        <MDXRemote
-          source={result.content}
-          options={{
-            mdxOptions: {
-              remarkPlugins: [remarkGfm, remarkMath],
-              rehypePlugins: [rehypeHighlight, rehypeKatex],
-            },
-          }}
-        />
-      </article>
+      <KatexCopyMenu>
+        <article className="prose dark:prose-invert max-w-none">
+          <MDXRemote
+            source={result.content}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [remarkGfm, remarkMath],
+                rehypePlugins: [rehypeHighlight, rehypeKatex],
+              },
+            }}
+          />
+        </article>
+      </KatexCopyMenu>
     </div>
   );
 }
