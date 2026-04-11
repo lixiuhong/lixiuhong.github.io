@@ -2,7 +2,7 @@
   "name": "Xiuhong Li",
   "title": "PhD · Deep Learning System & GPU Architecture",
   "location": "Beijing, China",
-  "bio": "I am currently serves as Vice President at Infinigence AI, where I am responsible for MaaS technologies. I received both my bachelor's degree and Ph.D. from Peking University. Prior to joining Infinigence AI, I held positions at SenseTime and Peking University, accumulating extensive industry and research experience in deep learning systems.",
+  "bio": "I currently serve as Vice President at Infinigence AI, where I am responsible for Model as a Service (MaaS) technologies. I received both my bachelor's degree and Ph.D. from Peking University. Prior to joining Infinigence AI, I served Peking University as Research Assistant Professor, and SenseTime as Research Director, respectively",
   "photoUrl": "/data/profile.jpg",
   "socialLinks": [
     {
@@ -25,11 +25,11 @@
   "researchInterests": [
     {
       "title": "Deep Learning System",
-      "description": "System design for LLM including inference, training, and production"
+      "description": "System design for LLM including inference, training, and applications"
     },
     {
       "title": "GPU Architecture",
-      "description": "GPU architecture and its related architecutres at large scale Datacenter"
+      "description": "Architecture design for large scale datacenter"
     }
   ],
   "awards": [
@@ -43,7 +43,7 @@
   "news": [
     {
       "date": "2026-04",
-      "text": "Give a presentation at QCon 2026"
+      "text": "I will give a presentation at QCon 2026"
     }
   ],
   "cvUrl": "/data/CV.pdf"
