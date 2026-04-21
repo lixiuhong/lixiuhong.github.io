@@ -74,11 +74,9 @@ $$
 t = \frac{N_{miss}}{TPS^{hit}} = \frac{(1-x)L}{TPS^{miss}}
 $$
 $$
-TPS^{hit} = \frac{N_{hit}}{t} = \frac{xL}{\frac{(1-x)L}{TPS^{miss}}} = \frac{x}{1-x}*TPS^{miss}
+TPS^{hit} = \frac{N_{hit}}{t} = \frac{xL}{\frac{(1-x)L}{TPS^{miss}}} = \frac{x}{1-x}*TPS^{miss}=\frac{x-a*x^{2}}{1-x}
 $$
-$$
-TPS^{hit} = \frac{x}{1-x}*TPS^{miss} = \frac{x-a*x^{2}}{1-x}
-$$
+
 对上述函数求导容易得到该函数在命中率[0,1)区间单调递增，而且逼近1的时候取值为正无穷，属于某种“双曲线型函数”。
 <p align="center">
   <img src="image-5.png" width="500">
