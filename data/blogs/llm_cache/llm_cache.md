@@ -43,9 +43,10 @@ $$
   <img src="image-4.png" width="600">
 </p>
 
-我们发现随着KV Cache命中率提升，$TPS$存在几个奇异点，即20%、40%、70%命中率下$TPS$很低。我们分析代码发现是这几个命中率下，框架在调度过程中会出现一些很小的需要计算的Chunk，即末尾残块（Tail Chunk），其大小会随命中率变化。若不满 Chunk Size 又无法拼接，需独立计算。末尾残块越小，$TPS$越差。我们可以通过工程优化进行优化处理。除掉奇异点之后，我们小心求证得到，未命中部分的吞吐随着KV Cache命中率提升，呈近似线性下降。
+我们发现随着KV Cache命中率提升，$TPS$存在几个奇异点，即20\%、40\%、70\%命中率下$TPS$很低。我们分析代码发现是这几个命中率下，框架在调度过程中会出现一些很小的需要计算的Chunk，即末尾残块（Tail Chunk），其大小会随命中率变化。若不满 Chunk Size 又无法拼接，需独立计算。末尾残块越小，$TPS$越差。我们可以通过工程优化进行优化处理。除掉奇异点之后，我们小心求证得到，未命中部分的吞吐随着KV Cache命中率提升，呈近似线性下降。$TPS^{miss} = TPS^{0}*(1 - a*x)$，其中$TPS^{0}$代表命中率为0时的吞吐率，$0<a<1$
 
-搞定$TPS$^{miss}$，我们再分析$TPS^{hit}$随着KV Cache命中率提升的变化，我们首先做一个数学建模，如下图所示，我们发现$TPS^{hit}$随着KV Cache命中率遵循双曲线函数$(1-x)/x$。
+
+搞定$TPS$^{miss}$，我们再分析$TPS^{hit}$随着KV Cache命中率提升的变化，我们首先做一个数学建模：
 
 #### 变量定义
 
@@ -53,7 +54,6 @@ $$
 |---------|-----------|-----------|
 | $L$ | 输入长度 | $tokens$ |
 | $x$ | 命中率 | [0,1] |
-| $TPS^{hit}$ | 未命中部分吞吐率 | $tokens/s$ |
 | $t$ | 请求执行时间 | $s$ |
 | $TPS^{total}$ | 总系统吞吐率 | $tokens/s$ |
 | $TPS^{hit}$ | 命中部分吞吐率 | $tokens/s$ |
@@ -71,17 +71,15 @@ $$
 N_{miss} =(1-x) * L
 $$
 $$
-t = \frac{N_{miss}}{TPS^{hit}} = \frac{(1-x)L}{TPS^{hit}}
+t = \frac{N_{miss}}{TPS^{hit}} = \frac{(1-x)L}{TPS^{miss}}
 $$
 $$
-TPS^{total} = \frac{N_{total}}{TPS^{hit}} = \frac{L}{\frac{(1-x)L}{TPS^{hit}}} = \frac{t}{1-x}
+TPS^{hit} = \frac{N_{hit}}{t} = \frac{xL}{\frac{(1-x)L}{TPS^{miss}}} = \frac{x}{1-x}*TPS^{miss}
 $$
-
 $$
-TPS^{hit} = \frac{N_{hit}}{T} = \frac{xL}{\frac{(1-x)L}{TPS^{hit}}} = \frac{x}{1-x}*TPS^{hit}
+TPS^{hit} = \frac{x}{1-x}*TPS^{miss} = \frac{x-a*x^{2}}{1-x}
 $$
-
-结论为双曲线：
+对上述函数求导容易得到该函数在命中率[0,1)区间单调递增，而且逼近1的时候取值为正无穷，属于某种“双曲线型函数”。
 <p align="center">
   <img src="image-5.png" width="500">
 </p>
