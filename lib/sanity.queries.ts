@@ -20,30 +20,41 @@ export async function getTalks(): Promise<Talk[]> {
 
 const BLOGS_DIR = path.join(process.cwd(), "data", "blogs");
 
+function findMdFile(dir: string): string | null {
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
+  return files.length > 0 ? path.join(dir, files[0]) : null;
+}
+
 export async function getBlogs(): Promise<Blog[]> {
   if (!fs.existsSync(BLOGS_DIR)) return [];
-  const files = fs.readdirSync(BLOGS_DIR).filter((f) => f.endsWith(".md"));
-  const blogs: Blog[] = files.map((filename) => {
-    const slug = filename.replace(/\.md$/, "");
-    const raw = fs.readFileSync(path.join(BLOGS_DIR, filename), "utf-8");
+  const entries = fs.readdirSync(BLOGS_DIR, { withFileTypes: true });
+  const blogs: Blog[] = [];
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const slug = entry.name;
+    const mdPath = findMdFile(path.join(BLOGS_DIR, slug));
+    if (!mdPath) continue;
+    const raw = fs.readFileSync(mdPath, "utf-8");
     const { data, content } = matter(raw);
-    return {
+    blogs.push({
       slug,
       title: data.title,
       date: data.date,
       summary:
         data.summary || content.replace(/[#*>\-\n]/g, " ").trim().slice(0, 150),
-    };
-  });
+    });
+  }
   return blogs.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }
 
 export async function getBlogBySlug(slug: string) {
-  const filePath = path.join(BLOGS_DIR, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
-  const raw = fs.readFileSync(filePath, "utf-8");
+  const blogDir = path.join(BLOGS_DIR, slug);
+  if (!fs.existsSync(blogDir)) return null;
+  const mdPath = findMdFile(blogDir);
+  if (!mdPath) return null;
+  const raw = fs.readFileSync(mdPath, "utf-8");
   const { data, content } = matter(raw);
   const meta: Blog = {
     slug,

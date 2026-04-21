@@ -33,13 +33,30 @@
       "Bash(node /Users/lixiuhong/workspace/blog/scripts/sync-data-assets.mjs)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/blogs)",
       "Bash(curl -s http://localhost:3000/blogs)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/blogs)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/blogs/llm_cache)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/api/blog-images/llm_cache/image.png)",
+      "Bash(curl -s http://localhost:3001/blogs)",
+      "Bash(lsof -ti:3000,3001)",
+      "Bash(xargs kill:*)",
+      "Bash(rm -rf /Users/lixiuhong/workspace/blog/.next)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/blogs/llm_cache)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/api/blog-images/llm_cache/image.png)",
+      "Bash(curl -s http://localhost:3000/api/blog-images/llm_cache/image.png)",
+      "Bash(lsof -ti:3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/data/blogs/llm_cache/image.png)",
+      "mcp__chrome-devtools__press_key",
+      "mcp__chrome-devtools__evaluate_script",
+      "Bash(curl -s http://localhost:3000/blogs/llm_cache)",
+      "Bash(grep -oP '\"stack\":\"[^\"]{0,500}\"')"
     ],
     "additionalDirectories": [
       "/Users/lixiuhong/workspace/blog/docs/superpowers",
       "/Users/lixiuhong/workspace/blog/sanity",
       "/Users/lixiuhong/workspace/blog/docs/superpowers/specs",
-      "/Users/lixiuhong/workspace/blog/app/blogs"
+      "/Users/lixiuhong/workspace/blog/app/blogs",
+      "/Users/lixiuhong/workspace/blog/app/api/blog-images"
     ]
   }
 }

@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeHighlight from "rehype-highlight";
 import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
 import KatexCopyMenu from "@/components/KatexCopyMenu";
 import type { Metadata } from "next";
 
@@ -23,9 +24,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: `${result.meta.title} - Xiuhong Li` };
 }
 
+function rewriteImagePaths(content: string, slug: string): string {
+  // Rewrite markdown images: ![alt](relative-path)
+  let result = content.replace(
+    /!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g,
+    (_, alt, src) => `![${alt}](/data/blogs/${slug}/${src})`
+  );
+  // Rewrite HTML img tags: <img src="relative-path">
+  result = result.replace(
+    /(<img\s[^>]*src=["'])(?!https?:\/\/)([^"']+)(["'])/g,
+    (_, before, src, after) => `${before}/data/blogs/${slug}/${src}${after}`
+  );
+  return result;
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const result = await getBlogBySlug(params.slug);
   if (!result) notFound();
+
+  const content = rewriteImagePaths(result.content, params.slug);
 
   return (
     <div className="max-w-[960px] mx-auto px-6 py-8">
@@ -40,11 +57,12 @@ export default async function BlogPostPage({ params }: Props) {
       <KatexCopyMenu>
         <article className="prose dark:prose-invert max-w-none">
           <MDXRemote
-            source={result.content}
+            source={content}
             options={{
               mdxOptions: {
+                format: "md",
                 remarkPlugins: [remarkGfm, remarkMath],
-                rehypePlugins: [rehypeHighlight, rehypeKatex],
+                rehypePlugins: [rehypeRaw, rehypeHighlight, rehypeKatex],
               },
             }}
           />
