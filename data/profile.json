@@ -42,6 +42,10 @@
   ],
   "news": [
     {
+      "date": "2026-05",
+      "text": "I will give a presentation at ADL 2026"
+    },
+    {
       "date": "2026-04",
       "text": "I will give a presentation at QCon 2026"
     }
