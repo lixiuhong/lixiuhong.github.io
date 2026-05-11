@@ -73,6 +73,23 @@ export default async function HomePage() {
           </section>
         )}
 
+        {profile.news && profile.news.length > 0 && (
+          <section className="mb-8">
+            <h2 className="text-base font-semibold text-accent dark:text-accent-dark mb-3 flex items-center gap-2">
+              <span className="w-1 h-5 bg-gradient-to-b from-accent to-accent-lighter rounded-full" />
+              News
+            </h2>
+            <div className="space-y-2">
+              {profile.news.map((item, i) => (
+                <div key={i} className="flex gap-3 text-sm">
+                  <span className="text-gray-400 dark:text-slate-500 w-20 flex-shrink-0">{item.date}</span>
+                  <span>{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {profile.researchInterests && profile.researchInterests.length > 0 && (
           <section className="mb-8">
             <h2 className="text-base font-semibold text-accent dark:text-accent-dark mb-3 flex items-center gap-2">
@@ -94,7 +111,7 @@ export default async function HomePage() {
         )}
 
         {profile.awards && profile.awards.length > 0 && (
-          <section className="mb-8">
+          <section>
             <h2 className="text-base font-semibold text-accent dark:text-accent-dark mb-3 flex items-center gap-2">
               <span className="w-1 h-5 bg-gradient-to-b from-accent to-accent-lighter rounded-full" />
               Awards
@@ -104,23 +121,6 @@ export default async function HomePage() {
                 <div key={i} className="flex gap-3 text-sm">
                   <span className="text-gray-400 dark:text-slate-500 w-20 flex-shrink-0">{award.date}</span>
                   <span>{award.description}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {profile.news && profile.news.length > 0 && (
-          <section>
-            <h2 className="text-base font-semibold text-accent dark:text-accent-dark mb-3 flex items-center gap-2">
-              <span className="w-1 h-5 bg-gradient-to-b from-accent to-accent-lighter rounded-full" />
-              News
-            </h2>
-            <div className="space-y-2">
-              {profile.news.map((item, i) => (
-                <div key={i} className="flex gap-3 text-sm">
-                  <span className="text-gray-400 dark:text-slate-500 w-20 flex-shrink-0">{item.date}</span>
-                  <span>{item.text}</span>
                 </div>
               ))}
             </div>
