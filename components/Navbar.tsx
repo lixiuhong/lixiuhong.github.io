@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/publications", label: "Publications" },
   { href: "/talks", label: "Talks" },
   { href: "/blogs", label: "Blogs" },
+  { href: "/books", label: "Books I Read" },
 ];
 
 export default function Navbar({ name }: { name: string }) {

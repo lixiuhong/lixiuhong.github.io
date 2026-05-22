@@ -67,3 +67,12 @@ export interface Blog {
   date: string;
   summary?: string;
 }
+
+export interface Book {
+  slug: string;
+  title: string;
+  author: string;
+  date: string;
+  rating?: number;
+  summary?: string;
+}
