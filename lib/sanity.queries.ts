@@ -14,8 +14,17 @@ export async function getPublications(): Promise<Publication[]> {
   return publicationsData as Publication[];
 }
 
+// Talk dates are stored as "YYYY-M" (e.g. "2022-6", "2026-10"), so compare them
+// by month index instead of as strings to keep the ordering numeric.
+function monthIndexOf(date: string): number {
+  const [year, month] = date.split("-").map((part) => parseInt(part, 10));
+  return (year || 0) * 12 + ((month || 1) - 1);
+}
+
 export async function getTalks(): Promise<Talk[]> {
-  return talksData as Talk[];
+  return [...(talksData as Talk[])].sort(
+    (a, b) => monthIndexOf(b.date) - monthIndexOf(a.date)
+  );
 }
 
 const BLOGS_DIR = path.join(process.cwd(), "data", "blogs");
