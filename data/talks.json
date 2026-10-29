@@ -6,7 +6,6 @@
     "date": "2026-10",
     "location": "北京",
     "type": "conference",
-    "description": "介绍无问芯穹跨集群异构推理架构 PDD（Prefill-RelayDecode-MainDecode）：以广域网以太网串联多地已建成的同构数据中心，将 PD 分离链路解构为 P-RLD-MD 三级架构，实测首 Token 延迟降低 51.5%、单 Token 成本降低 37.5%。",
     "url": "https://www.x-agi.cc/schedule/"
   },
   {
@@ -16,7 +15,6 @@
     "date": "2026-05",
     "location": "北京",
     "type": "invited",
-    "description": "面向 Agent 应用落地的工业级 MaaS 推理实践：并行方式对模型部署性能的影响、KV Cache 命中率与推理成本、负载均衡、Tool Call 与 enforcer、模型快速上下线。",
     "url": "https://conf.ccf.org.cn/web/html4/index.html?globalId=m1498609652026445824177733798386&type=1"
   },
   {
@@ -44,7 +42,6 @@
     "date": "2022-6",
     "location": "北京",
     "type": "invited",
-    "description": "Technique talk on compute-communication overlapping",
     "url": "http://dentar.cn/zt/2022ccs/html/"
   }
 ]
